@@ -13,15 +13,12 @@
     <h2>{{post.content}}</h2>
     <img class="img-responsive" src="{{post.photo_cover_url}}" alt="" />
     <h3>Author: {{post.author}}</h3>
-    <button type="button" name="delete" data-id="{{post.id}}" id="delete">Delete {{post.id}} </button>
+    <button type="button" name="delete" data-id="{{post.id}}" id="delete">Delete</button>
+    <a href="/update/{{post.id}}">Update</a>
 
-    <a href="/comments/add">New Comment</a>
-    <span>
-      <h4>"{{data | dump}}"</h4>
-      <h5>{{data[0].author}}</h5>
-    </span>
+    {% endfor %}
   </div>
-      {% endfor %}
+
   <a href="/add">NEW POST</a>
 
 

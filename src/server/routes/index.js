@@ -11,8 +11,6 @@ router.get('/', function (req, res, next) {
 
     renderObject.posts = posts;
 
-    console.log(renderObject);
-
     res.render('index', renderObject);
   })
   .catch(function(error) { return next(error);
@@ -38,25 +36,54 @@ router.post('/add', function (req, res, next) {
   });
 });
 
-router.get('/comments', function (req, res, next) {
-  knex('comments')
-  .select('*')
-  .then(function(data) {
-
-    const renderObject = {};
-
-    renderObject.data = data;
-
-    console.log(renderObject.data);
-
-    res.render('index', renderObject);
-  })
-  .catch(function(error) { return next(error);
+router.delete('/:id', function (req, res, next) {
+  console.log(req.params.id);
+  var id = req.params.id;
+  knex('posts')
+  .where('id', id)
+  .del()
+  .then((data)=> {
+    res.render('index');
+  }).catch((error) => {
+    console.log(error);
   });
 });
 
-router.get('/comments/add', function (req, res, next) {
-  res.render('comment');
+router.get('/update/:id', function (req, res, next) {
+  var id = req.params.id;
+
+  knex('posts').where('id', id)
+  .then((data) => {
+    console.log(data[0]);
+    data[0].pageTitle = 'Update';
+    res.render('add', data[0]);
+  }).catch((error) => {
+    console.log(error);
+  });
+
+});
+
+router.put('/update/:id', function (req, res, next) {
+  console.log(req.body);
+  var id = req.params.id;
+  var title = req.body.title;
+  var content = req.body.content;
+  var url = req.body.url;
+  var name = req.body.name;
+
+  knex('posts')
+  .where('id', id)
+  .update({
+    title: title,
+    content: content,
+    photo_cover_url: url,
+    author: name
+  })
+  .then((data)=> {
+    res.render('index');
+  }).catch((error)=> {
+    console.log(error);
+  });
 });
 
 module.exports = router;
