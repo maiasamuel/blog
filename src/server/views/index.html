@@ -17,7 +17,7 @@
       <a class="navbar-brand" href='/'>|</a>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <a class="navbar-brand" href='/'> Welcome to Maia's first blog, feel free to post anything!</a>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" >
         <li> Connect with me .. </li>
         <li> <a href="https://www.linkedin.com/in/maia-s-795280122?trk=nav_responsive_tab_profile_pic">LinkedIn</a></li>
         <li> <a href="https://twitter.com/MaiaFFA">Twitter</a></li>
@@ -27,7 +27,7 @@
 </nav>
 
 
-<div class="panel panel-default">
+<div class="panel panel-default" id='panel'>
   <div class="container">
     {% for post in posts %}
       <div class="panel-heading"><h1>{{post.title}}</h1></div>
