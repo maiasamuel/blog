@@ -88,7 +88,7 @@ router.put('/update/:id', function (req, res, next) {
 
 router.get('/comment', function(req, res, next) {
   knex.from('posts')
-  .join('comments','posts.id', 'comments.post_id')
+  .innerJoin('comments','posts.id', 'comments.post_id')
   .where('posts.id', 'comments.post_id')
   .then(function(comments) {
 

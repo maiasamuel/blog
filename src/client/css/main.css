@@ -2,7 +2,7 @@ body {
   padding: 50px;
   font:  "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
-  color: blue;
+  color: white;
 }
 
 a {
@@ -27,4 +27,8 @@ h4 {
 
 h4 {
   font-size: 20px;
+}
+
+.deletebutton {
+  color: black;
 }
