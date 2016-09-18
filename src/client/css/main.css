@@ -1,30 +1,63 @@
 body {
   padding: 50px;
   font:  "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: black;
-  color: blue;
+  background-image: url('http://kurld.com/images/wallpapers/marble-wallpaper/marble-wallpaper-25.jpg');
+  color: white;
+}
+
+legend {
+  color: black;
+}
+
+label {
+  color: black;
+}
+
+.btn{
+  color: black;
+}
+
+.btn-primary{
+  color: black;
 }
 
 a {
-  color: #00B7FF;
+  color: black;
 }
 
 h1 {
   font-size: 45px;
+  color: black;
 }
 
 h2 {
   font-size: 35px;
+  color: black;
 }
 
 h3 {
   font-size: 30px;
+  color: black;
 }
 
 h4 {
   font-size: 25px;
+  color: black;
 }
 
 h4 {
   font-size: 20px;
+  color: black;
+}
+
+.deletebutton {
+  color: black;
+}
+#panel {
+background-color: transparent;
+color: black;
+
+  /*background-image: url('http://www.cabinetbroker.net/prefab-countertops/marble/elegant-rose-marble-ct-188-prefab-marble.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;*/
 }

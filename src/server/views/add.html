@@ -3,7 +3,6 @@
 {% block title %}{% endblock %}
 
 {% block content %}
-<a href='/' class="btn btn-default btn-lg btn-block">Maia's Blog</a>
 
 <form class="form-horizontal" method='POST' action='/add'>
   <fieldset>
@@ -39,9 +38,9 @@
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         {% if pageTitle === 'Update' %}
-        <button type="button" id="update" data-id="{{id}}">Update</button>
+        <button type="button" class="btn" id="update" data-id="{{id}}">Update</button>
         {% else %}
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn">Submit</button>
         {% endif %}
       </div>
     </div>

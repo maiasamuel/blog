@@ -86,4 +86,36 @@ router.put('/update/:id', function (req, res, next) {
   });
 });
 
+router.get('/comment', function(req, res, next) {
+  knex.from('posts')
+  .innerJoin('comments','posts.id', 'comments.post_id')
+  .where('posts.id', 'comments.post_id')
+  .then(function(comments) {
+
+    const renderObject = {};
+
+    renderObject.comments = comments;
+
+    res.render('index', renderObject);
+  })
+  .catch(function(error) { return next(error);
+  });
+
+});
+
+router.post('/comment', function(req, res, next) {
+  console.log(req.params.id);
+
+  var name = req.body.name;
+  var content = req.body.content;
+
+  knex('comments').insert({author: name, content: content})
+  .then((data) => {
+    res.redirect('/');
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+});
+
 module.exports = router;
