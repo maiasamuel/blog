@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font:  "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: blue;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}
