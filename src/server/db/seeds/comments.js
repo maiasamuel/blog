@@ -6,7 +6,7 @@ exports.seed = function(knex, Promise) {
       return Promise.all([
         // Inserts seed entries
         knex('comments')
-        .insert({author: 'Maia Samuel', content: 'First Comment', post_id: 9})
+        .insert({author: 'Maia Samuel', content: 'First Comment', posts_id: 9})
       ]);
     });
 };
