@@ -1,7 +1,8 @@
 body {
   padding: 50px;
   font:  "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url('http://kurld.com/images/wallpapers/marble-wallpaper/marble-wallpaper-25.jpg');
+  /*background-color: red;*/
+  background-image: url('http://mendozamg.com/communities/5/000/001/652/325//images/13300706.jpg')!important;*/
   color: white;
 }
 
@@ -56,8 +57,7 @@ h4 {
 #panel {
 background-color: transparent;
 color: black;
-
-  /*background-image: url('http://www.cabinetbroker.net/prefab-countertops/marble/elegant-rose-marble-ct-188-prefab-marble.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;*/
+/*background-image: url('http://www.cabinetbroker.net/prefab-countertops/marble/elegant-rose-marble-ct-188-prefab-marble.jpg');
+background-size: cover;
+background-repeat: no-repeat;*/
 }
