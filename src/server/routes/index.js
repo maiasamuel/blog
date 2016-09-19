@@ -87,16 +87,16 @@ router.put('/update/:id', function (req, res, next) {
 });
 
 router.get('/comment', function(req, res, next) {
-  knex.from('comments')
-  .innerJoin('posts','comments.posts_id', 'posts.id')
-  .where('posts.id', 'comments.posts_id')
+
+
+  knex('comments')
   .then(function(comments) {
 
     const renderObject = {};
 
     renderObject.comments = comments;
 
-    res.render('index', renderObject);
+    res.render('comment', renderObject);
   })
   .catch(function(error) { return next(error);
   });
