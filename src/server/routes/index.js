@@ -63,6 +63,7 @@ router.get('/update/:id', function (req, res, next) {
 
 });
 
+re
 router.put('/update/:id', function (req, res, next) {
   console.log(req.body);
   var id = req.params.id;
